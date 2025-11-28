@@ -24,10 +24,10 @@ const SessionSchema = new mongoose.Schema(
       type: String,
     },
     startTime: {
-      type: Date,
+      type: String,
     },
     endTime: {
-      type: Date,
+      type: String,
     },
     sessionName: {
       type: String,
