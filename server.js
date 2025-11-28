@@ -7,7 +7,7 @@ import cookieParser from "cookie-parser";
 import connectDB from "./config/db.js";
 
 import authRoutes from "./routes/authRoutes.js";
-
+import sessionRoutes from "./routes/sessionRoutes.js";
 await connectDB();
 
 const app = express();
@@ -45,7 +45,7 @@ app.get("/", (req, res) => {
 // API Routes
 // =======================
 app.use("/api/users", authRoutes);
-
+app.use("/api", sessionRoutes);
 
 // =======================
 // Start server
