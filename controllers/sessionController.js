@@ -100,14 +100,14 @@ export const sendSessionEmail = async (req, res) => {
 
     // Prepare template merge fields
     const mergeInfo = {
-      facultyName: s.facultyName,
-      sessionName: s.sessionName,
-      date: formatDate(s.date),
-      startTime: s.startTime,
-      endTime: s.endTime,
-      facultyType: s.facultyType,
-      topicName: s.topicName,
-      hallName: s.hallName,
+      facultyName: session.facultyName,
+      sessionName: session.sessionName,
+      date: formatDate(session.date),
+      startTime: session.startTime,
+      endTime: session.endTime,
+      facultyType: session.facultyType,
+      topicName: session.topicName,
+      hallName: session.hallName,
     };
 
     await sendEmailWithTemplate({
