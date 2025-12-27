@@ -8,7 +8,7 @@ const SessionSchema = new mongoose.Schema(
     hallName: {
       type: String,
     },
-    facultyType: {
+    abstractNumber: {
       type: String,
     },
     facultyName: {

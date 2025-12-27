@@ -105,7 +105,7 @@ export const sendSessionEmail = async (req, res) => {
       date: formatDate(session.date),
       startTime: session.startTime,
       endTime: session.endTime,
-      facultyType: session.facultyType,
+      abstractNumber: session.abstractNumber,
       topicName: session.topicName,
       hallName: session.hallName,
     };
@@ -150,7 +150,7 @@ export const sendAllSessionEmails = async (req, res) => {
           date: formatDate(s.date),
           startTime: s.startTime,
           endTime: s.endTime,
-          facultyType: s.facultyType,
+          abstractNumber: s.abstractNumber,
           topicName: s.topicName,
           hallName: s.hallName,
         };
