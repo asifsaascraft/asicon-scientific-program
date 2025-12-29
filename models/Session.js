@@ -5,7 +5,7 @@ const SessionSchema = new mongoose.Schema(
     date: {
       type: Date,
     },
-    hallName: {
+    screenNumber: {
       type: String,
     },
     abstractNumber: {

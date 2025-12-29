@@ -107,7 +107,7 @@ export const sendSessionEmail = async (req, res) => {
       endTime: session.endTime,
       abstractNumber: session.abstractNumber,
       topicName: session.topicName,
-      hallName: session.hallName,
+      screenNumber: session.screenNumber,
     };
 
     await sendEmailWithTemplate({
@@ -152,7 +152,7 @@ export const sendAllSessionEmails = async (req, res) => {
           endTime: s.endTime,
           abstractNumber: s.abstractNumber,
           topicName: s.topicName,
-          hallName: s.hallName,
+          screenNumber: s.screenNumber, 
         };
 
         await sendEmailWithTemplate({
