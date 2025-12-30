@@ -105,9 +105,9 @@ export const sendSessionEmail = async (req, res) => {
       date: formatDate(session.date),
       startTime: session.startTime,
       endTime: session.endTime,
-      abstractNumber: session.abstractNumber,
+      hallName: session.hallName,
       topicName: session.topicName,
-      screenNumber: session.screenNumber,
+      role: session.role,
     };
 
     await sendEmailWithTemplate({
@@ -150,9 +150,9 @@ export const sendAllSessionEmails = async (req, res) => {
           date: formatDate(s.date),
           startTime: s.startTime,
           endTime: s.endTime,
-          abstractNumber: s.abstractNumber,
+          hallName: s.hallName,
           topicName: s.topicName,
-          screenNumber: s.screenNumber, 
+          role: s.role, 
         };
 
         await sendEmailWithTemplate({

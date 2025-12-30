@@ -5,10 +5,10 @@ const SessionSchema = new mongoose.Schema(
     date: {
       type: Date,
     },
-    screenNumber: {
+    hallName: {
       type: String,
     },
-    abstractNumber: {
+    role: {
       type: String,
     },
     facultyName: {
