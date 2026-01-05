@@ -35,6 +35,12 @@ const SessionSchema = new mongoose.Schema(
     topicName: {
       type: String,
     },
+    screenNumber: {
+      type: String,
+    },
+    attachmentLink: {
+      type: String,
+    },
   },
   { timestamps: true }
 );
