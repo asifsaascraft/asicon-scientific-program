@@ -24,7 +24,7 @@ const sendEmailWithTemplate = async ({ to, name, templateKey, mergeInfo }) => {
       mail_template_key: templateKey,
       from: {
         address: process.env.ZEPTO_FROM,
-        name: "AOICON 2026 - Scientific Progam",
+        name: "ABSICON 2026",
       },
       to: [
         {

@@ -7,6 +7,7 @@ import cookieParser from "cookie-parser";
 import connectDB from "./config/db.js";
 
 import authRoutes from "./routes/authRoutes.js";
+import facultyRoutes from "./routes/facultyRoutes.js";
 import sessionRoutes from "./routes/sessionRoutes.js";
 await connectDB();
 
@@ -38,13 +39,14 @@ app.use(morgan("dev"));
 // Health check
 // =======================
 app.get("/", (req, res) => {
-  res.send("ASICON Scientific Program Backend is running ..... ");
+  res.send("Ssession Backend is running ..... ");
 });
 
 // =======================
 // API Routes
 // =======================
 app.use("/api/users", authRoutes);
+app.use("/api/faculties", facultyRoutes);
 app.use("/api", sessionRoutes);
 
 // =======================
