@@ -1,6 +1,6 @@
 import Faculty from "../models/Faculty.js";
 import sendEmailWithTemplate from "../utils/sendEmail.js";
-import { formatDate, formatTime } from "../utils/formatDateTime.js";
+
 
 // ==========================
 // Create Faculty
@@ -151,7 +151,6 @@ export const deleteFaculty = async (req, res) => {
 };
 
 
-
 // ==========================
 // Generate Faculty Schedule HTML
 // ==========================
@@ -170,8 +169,8 @@ const generateScheduleTable = (details = []) => {
     .map(
       (item) => `
       <tr>
-        <td>${formatDate(item.date)}</td>
-        <td>${formatTime(item.time)}</td>
+        <td>${item.date || "-"}</td>
+        <td>${item.time || "-"}</td>
         <td>${item.hallName || "-"}</td>
         <td>${item.role || "-"}</td>
         <td>${item.session || "-"}</td>

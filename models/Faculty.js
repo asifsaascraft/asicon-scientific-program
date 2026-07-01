@@ -19,10 +19,10 @@ const FacultySchema = new mongoose.Schema(
     details: [
       {
         date: {
-          type: Date,
+          type: String,
         },
         time: {
-          type: Date,
+          type: String,
         },
         hallName: {
           type: String,
