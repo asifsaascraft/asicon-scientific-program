@@ -8,7 +8,8 @@ import connectDB from "./config/db.js";
 
 import authRoutes from "./routes/authRoutes.js";
 import facultyRoutes from "./routes/facultyRoutes.js";
-import sessionRoutes from "./routes/sessionRoutes.js";
+
+
 await connectDB();
 
 const app = express();
@@ -47,7 +48,6 @@ app.get("/", (req, res) => {
 // =======================
 app.use("/api/users", authRoutes);
 app.use("/api/faculties", facultyRoutes);
-app.use("/api", sessionRoutes);
 
 // =======================
 // Start server

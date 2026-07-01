@@ -18,6 +18,7 @@ router.get("/:id", getFacultyById);
 router.put("/:id", updateFaculty);
 router.delete("/:id", deleteFaculty);
 
+
 // Email APIs
 router.post("/:id/send-email", sendSingleFacultyEmail);
 router.post("/send-bulk-email", sendBulkFacultyEmails);
