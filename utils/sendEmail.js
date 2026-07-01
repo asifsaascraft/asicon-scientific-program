@@ -9,7 +9,6 @@ const client = new SendMailClient({
   token: process.env.ZEPTO_TOKEN,
 });
 
-
 /**
  * Send email via ZeptoMail template
  * @param {Object} params
@@ -22,10 +21,19 @@ const sendEmailWithTemplate = async ({ to, name, templateKey, mergeInfo }) => {
   try {
     const resp = await client.sendMailWithTemplate({
       mail_template_key: templateKey,
+
       from: {
         address: process.env.ZEPTO_FROM,
         name: "ABSICON 2026",
       },
+
+      reply_to: [
+        {
+          address: process.env.ZEPTO_REPLY_TO,
+          name: "ABSICON 2026 Support",
+        },
+      ],
+
       to: [
         {
           email_address: {
@@ -34,6 +42,7 @@ const sendEmailWithTemplate = async ({ to, name, templateKey, mergeInfo }) => {
           },
         },
       ],
+
       merge_info: mergeInfo,
     });
     return resp;
