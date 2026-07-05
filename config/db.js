@@ -6,7 +6,7 @@ const connectDB = async () => {
     // v6+ no need for useNewUrlParser or useUnifiedTopology
     const conn = await mongoose.connect(process.env.MONGO_URI);
 
-    console.log(`MongoDB connected: ${conn.connection.host}`);
+    console.log("MongoDB connected:");
   } catch (error) {
     console.error("MongoDB connection failed:", error.message);
     process.exit(1);

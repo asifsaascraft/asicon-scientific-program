@@ -16,7 +16,15 @@ router.use(cookieParser());
 
 // Public
 router.post("/register", registerUser);
+
+/**
+ * @swagger
+ * /api/users/login:
+ *   post:
+ *     summary: Login User
+ */
 router.post("/login", loginUser);
+
 router.post("/forgot-password", forgotPassword);
 router.post("/reset-password/:token", resetPassword);
 

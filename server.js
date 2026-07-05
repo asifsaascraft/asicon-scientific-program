@@ -1,3 +1,6 @@
+// Configure DNS first
+import "./config/dns.js";
+
 import dotenv from "dotenv";
 dotenv.config();
 import express from "express";
@@ -5,6 +8,8 @@ import cors from "cors";
 import morgan from "morgan";
 import cookieParser from "cookie-parser";
 import connectDB from "./config/db.js";
+import swaggerUi from "swagger-ui-express";
+import swaggerSpec from "./docs/swagger.js";
 
 import authRoutes from "./routes/authRoutes.js";
 import facultyRoutes from "./routes/facultyRoutes.js";
@@ -35,6 +40,11 @@ app.use(express.json());
 app.use(cors(corsOptions));
 app.use(cookieParser()); // Needed to read cookies (refresh token)
 app.use(morgan("dev"));
+app.use(
+    "/api-docs",
+    swaggerUi.serve,
+    swaggerUi.setup(swaggerSpec)
+);
 
 // =======================
 // Health check
