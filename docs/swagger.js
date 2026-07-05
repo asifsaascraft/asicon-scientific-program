@@ -1,4 +1,6 @@
 import swaggerJsdoc from "swagger-jsdoc";
+import { schemas } from "./schemas.js";
+import { responses } from "./responses.js";
 
 const options = {
   definition: {
@@ -7,13 +9,25 @@ const options = {
     info: {
       title: "Agenda Backend API",
       version: "1.0.0",
-      description: "Agenda Backend API Documentation",
+      description:
+        "REST API Documentation for Agenda Backend using Express.js, MongoDB and JWT Authentication.",
     },
 
     servers: [
       {
         url: "http://localhost:5000",
-        description: "Local Server",
+        description: "Local Development Server",
+      },
+    ],
+
+    tags: [
+      {
+        name: "Authentication",
+        description: "Authentication APIs",
+      },
+      {
+        name: "Faculty",
+        description: "Faculty Management APIs",
       },
     ],
 
@@ -25,13 +39,11 @@ const options = {
           bearerFormat: "JWT",
         },
       },
-    },
 
-    security: [
-      {
-        BearerAuth: [],
-      },
-    ],
+      schemas,
+
+      responses,
+    },
   },
 
   apis: ["./routes/*.js"],

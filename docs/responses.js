@@ -1,21 +1,33 @@
 export const responses = {
   Success: {
-    description: "Success",
+    description: "Request completed successfully.",
+  },
+
+  Created: {
+    description: "Resource created successfully.",
   },
 
   BadRequest: {
-    description: "Bad Request",
+    description: "Bad Request.",
   },
 
   Unauthorized: {
-    description: "Unauthorized",
+    description: "Unauthorized.",
+  },
+
+  Forbidden: {
+    description: "Forbidden.",
   },
 
   NotFound: {
-    description: "Resource Not Found",
+    description: "Resource not found.",
   },
 
-  ServerError: {
-    description: "Internal Server Error",
+  Conflict: {
+    description: "Resource already exists.",
+  },
+
+  InternalServerError: {
+    description: "Internal Server Error.",
   },
 };
