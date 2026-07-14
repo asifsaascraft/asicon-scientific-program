@@ -13,6 +13,7 @@ import swaggerSpec from "./docs/swagger.js";
 
 import authRoutes from "./routes/authRoutes.js";
 import facultyRoutes from "./routes/facultyRoutes.js";
+import delegateRoutes from "./routes/delegateRoutes.js";
 
 
 await connectDB();
@@ -58,6 +59,7 @@ app.get("/", (req, res) => {
 // =======================
 app.use("/api/users", authRoutes);
 app.use("/api/faculties", facultyRoutes);
+app.use("/api/delegates", delegateRoutes);
 
 // =======================
 // Start server
